@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com');
+
+head {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {font-family: 'Roboto', sans-serif;
+}
+
+/* Styling the navigation container */
+nav {
+    background-color: #333;
+    margin: 20px;          /* Space around the bar to see the round edges */
+    border-radius: 50px;   /* This makes the edges round (pill shape) */
+    overflow: hidden;      /* Clips the links so they stay inside the curves */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove bullets and margin from the list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;         /* Horizontal alignment */
+    justify-content: center; /* Centers the links inside the bar */
+}
+
+/* Style the links */
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    transition: 0.3s;      /* Smooth color change */
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: #555; /* Modern grey hover */
+    color: #f7f7f7;         /* Neon blue text on hover */
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+/* Position the entire figure (image + text) */
+.item-a {
+  grid-column: 1;
+  grid-row: 1; 
+}
+
+.item-b {
+  grid-column: 2;
+  grid-row: 1 / span 2; /* This image and its text will span two rows */
+}
+
+
+figure {
+  display: grid;
+  grid-template-areas: "stack"; /* Create a single stack area */
+}
+img, figcaption {
+  grid-area: stack; /* Both elements occupy the same space */
+}
+figcaption {
+  align-self: end; /* Position text at the bottom of the stack */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+  color: white;
+  padding: 10px
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 200%; /* Ensures html and body fill the initial viewport */
+}
+
+.full-screen-container {
+    width: 100vw;   /* Takes 100% of the viewport width */
+    height: 100vh;  /* Takes 100% of the viewport height */
+    /* Add other styles as needed */
+}
+
+
+/* Default styles for large screens */
+.container {
+    max-width: 1200px;
+}
+
+/* Styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Becomes fluid on smaller screens */
+    }
+    /* Reorganize layout (e.g., sidebar stacks below main content) */
+}

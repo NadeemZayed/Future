@@ -1,0 +1,49 @@
+
+body {
+    background-color: lightblue;
+}
+
+@import url('https://fonts.googleapis.com');
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styling the navigation container */
+nav {
+    background-color: #333;
+    margin: 20px;          /* Space around the bar to see the round edges */
+    border-radius: 50px;   /* This makes the edges round (pill shape) */
+    overflow: hidden;      /* Clips the links so they stay inside the curves */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove bullets and margin from the list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;         /* Horizontal alignment */
+    justify-content: center; /* Centers the links inside the bar */
+}
+
+/* Style the links */
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    transition: 0.3s;      /* Smooth color change */
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: #555; /* Modern grey hover */
+    color: #f7f7f7;         /* Neon blue text on hover */
+}
